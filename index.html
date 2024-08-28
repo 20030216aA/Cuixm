@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>崔星明个人陈述</title>
+    <title>崔星明</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,10 +74,13 @@
             object-fit: contain;
             border-radius: 5px;
         }
+        .grid-container img:nth-child(3) {
+            border-radius: 15px;
+        }
         .wide-grid-container img {
             width: calc(25% - 10px);
-            height: auto;
-            object-fit: contain;
+            height: 500px; /* 设置相同高度 */
+            object-fit: cover;
             border-radius: 5px;
         }
         .large-image img {
@@ -89,7 +92,7 @@
         }
         .contact {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 50px; /* 向上调整 */
             font-size: 1em;
         }
         .contact p {
