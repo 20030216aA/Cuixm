@@ -6,7 +6,7 @@
     <title>崔星明个人简历</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,21 +18,41 @@
         .main-image {
             width: 150px;
             height: auto;
-            border-radius: 50%;
+            border-radius: 8px;
             margin-top: 20px;
         }
         .content {
             max-width: 800px;
             text-align: justify;
-            margin-top: 20px;
-            line-height: 1.6;
+            margin: 20px;
+        }
+        .content p {
+            text-indent: 2em; /* 首行缩进 */
+            margin-bottom: 1em;
+        }
+        .grid-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .grid-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
         h1 {
-            color: #333;
-            margin: 20px 0;
+            margin-top: 20px;
         }
-        p {
-            margin-bottom: 15px;
+        @media (max-width: 768px) {
+            .main-image {
+                width: 100px; /* 在较小屏幕上调整图片大小 */
+            }
+            .content {
+                padding: 10px;
+                text-align: justify;
+            }
         }
     </style>
 </head>
@@ -48,17 +68,13 @@
         <p>非常感谢您给予我这次与您深入交流的机会。贵校一直是我梦寐以求的学府，您的研究方向与教学成果非常吸引我。下面是我的个人经历，部分内容与您的研究领域有较好的契合：</p>
         <p>三维建模: 掌握一些基础的环境建筑建模、渲染和呈现技术，熟悉 3dmax、Lumion、unity 以及 PS、PR 等相关软件。运用这些技术，参加睿亢机器人开发者大赛数字建模方向，获得全国一等奖。</p>
     </div>
-
-     <!-- Four Image Grid -->
+    
+    <!-- Four Image Grid -->
     <div class="grid-container">
        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/主.gif" alt="Image 1">
-        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/%E6%90%AD%E5%BB%BA.gif" alt="Image 2">
+        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/建筑.gif" alt="Image 2">
         <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com.gif" alt="Image 3">
         <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/VR.gif" alt="Image 4">
     </div>
-
 </body>
 </html>
-
-    
-   
