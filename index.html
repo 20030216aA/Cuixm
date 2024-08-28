@@ -14,6 +14,7 @@
             align-items: center;
             flex-direction: column;
             text-align: center;
+            background: #f4f4f4;
         }
         .main-image {
             width: 150px;
@@ -24,11 +25,21 @@
         .content {
             max-width: 800px;
             text-align: justify;
+            background: white;
+            padding: 20px;
             margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .content p, .content ul {
-            text-indent: 2em; /* 首行缩进 */
+        .content h2 {
+            text-align: left;
+            color: #333;
+            font-size: 1.5em;
+        }
+        .content p, .content ul, .content ol {
+            text-indent: 2em;
             margin-bottom: 1em;
+            text-align: left;
         }
         .grid-container {
             width: 100%;
@@ -36,26 +47,26 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
             padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .grid-container img {
             width: 100%;
-            height: 200px; /* 设置统一的图片高度 */
-            object-fit: cover; /* 保持图片比例 */
+            height: 200px;
+            object-fit: cover;
             border-radius: 5px;
-        }
-        h1 {
-            margin-top: 20px;
         }
         @media (max-width: 768px) {
             .main-image {
-                width: 100px; /* 在较小屏幕上调整图片大小 */
+                width: 100px;
             }
             .content {
                 padding: 10px;
-                text-align: justify;
             }
             .grid-container img {
-                height: 150px; /* 在小屏幕上调整图片高度 */
+                height: 150px;
             }
         }
     </style>
@@ -66,32 +77,39 @@
     <!-- Main Image -->
     <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/证件照.png" alt="崔星明" class="main-image">
     
-    <!-- Three Paragraphs -->
+    <!-- Content Sections -->
     <div class="content">
-        <p>老师您好！我是太原理工大学的崔星明，计算机科学与技术专业（卓越工程师班），中共预备党员，成绩排名 2/224，获得国家奖学金，睿抗机器人开发者大赛全国一等奖，通过英语四六级考试，语言水平能够在开放环境中满足科研工作对外语的读写要求。</p>
-        <p>非常感谢您给予我这次与您深入交流的机会。贵校一直是我梦寐以求的学府，您的研究方向与教学成果非常吸引我。下面是我的个人经历，部分内容与您的研究领域有较好的契合：</p>
-        <p><strong>项目介绍：</strong></p>
-        <ul>
-            <li><strong>项目名称：</strong>岁月风华——登临俯瞰临江都</li>
-            <li><strong>类型：</strong>数字三维建模、虚拟现实（竞赛）</li>
-            <li><strong>简介：</strong>为更有效地保护滕王阁历史遗迹以及提升游客的观赏体验组织开发滕王阁3D模型</li>
-            <li><strong>成果：</strong>获得睿抗机器人开发者大赛国家一等奖（工信部）</li>
-            <li><strong>内容：</strong>
-                <ol>
-                    <li>收集相关素材，运用3D Max搭建滕王阁的基础模型</li>
-                    <li>利用Lumion进行场景渲染，借助Unity增加互动，提升用户体验</li>
-                    <li>使用PR、AE制作视频展示，导入VR设备，提供沉浸式体验</li>
-                </ol>
-            </li>
-        </ul>
+        <h2>岁月风华 — 登临俯瞰临江都</h2>
+        <p>类型：数字三维建模、虚拟现实（竞赛）</p>
+        <p>简介：为更有效地保护滕王阁历史遗迹以及提升游客的观赏体验组织开发滕王阁3D模型</p>
+        <p>成果：获得睿抗机器人开发者大赛国家一等奖（工信部）</p>
+        <p>内容：</p>
+        <ol>
+            <li>收集相关素材，运用3D Max搭建滕王阁的基础模型</li>
+            <li>利用Lumion进行场景渲染，借助Unity增加互动，提升用户体验</li>
+            <li>使用PR、AE制作视频展示，导入VR设备，提供沉浸式体验</li>
+        </ol>
     </div>
     
     <!-- Four Image Grid -->
     <div class="grid-container">
        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/主.gif" alt="Image 1">
-        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/建筑.gif" alt="Image 2">
+        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/%E6%90%AD%E5%BB%BA.gif" alt="Image 2">
         <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com.gif" alt="Image 3">
         <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/VR.gif" alt="Image 4">
+    </div>
+
+    <!-- Additional Project -->
+    <div class="content">
+        <h2>QR通 — 基于二维码的信息管理系统</h2>
+        <p>类型：软件开发（软件著作权）</p>
+        <p>简介：开发信息管理系统，采用二维码技术可用于固定资产的管理</p>
+        <p>内容：</p>
+        <ol>
+            <li>前后端开发、二维码信息生成与使用Qrcode、Zbar做信息二维码的生成与提取</li>
+            <li>使用Opencv对二维码图形进行识别前的预处理</li>
+            <li>申请发表软件著作权（第一作者）</li>
+        </ol>
     </div>
 </body>
 </html>
