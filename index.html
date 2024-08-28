@@ -31,9 +31,10 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
         }
-        .content, .intro {
-            text-align: justify;
+        .content, .intro, .practice, .honor {
+            text-align: left;
             margin-bottom: 20px;
+            text-indent: 2em;
         }
         .content h2 {
             text-align: left;
@@ -41,14 +42,15 @@
             font-size: 1.5em;
             margin-top: 0;
         }
-        .content p, .content ul, .content ol, .intro p {
-            text-indent: 2em;
+        .content p, .content ul, .content ol, .intro p, .practice p, .honor p {
             margin-bottom: 1em;
-            text-align: left;
         }
         .content ol {
-            list-style-type: disc;
-            padding-left: 1.5em;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .content ol li {
+            text-indent: 2em;
         }
         .grid-container {
             display: grid;
@@ -62,16 +64,6 @@
             object-fit: contain;
             border-radius: 5px;
         }
-        .honor-wall-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 40px 0;
-        }
-        .honor-wall-container h2 {
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #333;
-        }
         @media (max-width: 768px) {
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -84,9 +76,6 @@
             }
             .content-container, .intro-container {
                 padding: 10px;
-            }
-            .honor-wall-container h2 {
-                font-size: 1.5em;
             }
         }
     </style>
@@ -185,24 +174,32 @@
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (10).gif" alt="痫无忧 Image 4">
         </div>
     </div>
-
-    <!-- Practice Wall -->
-    <div class="honor-wall-container">
-        <h2>实践墙</h2>
-        <p>我来自农村，艰苦的成长环境塑造了我坚韧不拔的品质，但是也有与来自农村其他同学相同的困扰，缺乏自信心，不善于表达等，这些问题通过大学里面参加学生工作、社会实践、学科竞赛得到了解决。</p>
-        <div class="grid-container" style="grid-template-columns: 1fr;">
-            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/实践墙1.png" alt="实践墙1">
-            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/实践墙2.png" alt="实践墙2">
+    <!-- Practical Experience Section -->
+    <div class="content-container">
+        <div class="practice">
+            <h2>实践墙</h2>
+            <p>我来自农村，艰苦的成长环境塑造了我坚韧不拔的品质，但是也有与来自农村其他同学相同的困扰，缺乏自信心，不善于表达等，这些问题通过大学里面参加学生工作、社会实践、学科竞赛得到了解决。</p>
+            <div class="grid-container">
+                <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/实践墙1.png" alt="实践墙">
+            </div>
+            <div class="grid-container">
+                <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/实践墙2.png" alt="实践墙">
+            </div>
+        </div>
+    </div>
+    <!-- Honor Wall Section -->
+    <div class="content-container">
+        <div class="honor">
+            <h2>荣誉墙</h2>
+            <p>在这个不断奋斗的过程中，也收获到许多荣誉和嘉奖，尤其是国奖奖学金和国家励志奖学金，这些都是对我个人辛苦付出、综合能力、社会贡献的肯定。</p>
+            <div class="grid-container">
+                <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/荣誉墙.png" alt="荣誉墙">
+            </div>
         </div>
     </div>
 
-    <!-- Honor Wall -->
-    <div class="honor-wall-container">
-        <h2>荣誉墙</h2>
-        <p>在这个不断奋斗的过程中，也收获到许多荣誉和嘉奖，尤其是国家奖学金和国家励志奖学金，这些都是对我个人辛苦付出、综合能力、社会贡献的肯定。</p>
-        <div class="grid-container" style="grid-template-columns: 1fr;">
-            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/荣誉墙.png" alt="荣誉墙">
-        </div>
+    <div class="content-container">
+        <p style="text-align: left;">写到最后，感谢老师能考虑我的申请，我会认真关注贵校的预推免招生信息，并认真准备相关考核项目，珍惜这次宝贵机会，如果您有任何需要进一步了解或者指导考核的随时联系我就好，谢谢老师！</p>
     </div>
     
 </body>
