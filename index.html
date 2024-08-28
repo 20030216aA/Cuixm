@@ -22,7 +22,7 @@
             border-radius: 8px;
             margin-top: 20px;
         }
-        .intro-container, .content-container, .honor-wall-container {
+        .intro-container, .content-container {
             width: 100%;
             max-width: 900px;
             margin: 20px;
@@ -35,7 +35,7 @@
             text-align: justify;
             margin-bottom: 20px;
         }
-        .content h2, .honor-wall-container h2 {
+        .content h2 {
             text-align: left;
             color: #333;
             font-size: 1.5em;
@@ -52,6 +52,7 @@
         }
         .grid-container {
             display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 10px;
             margin-top: 20px;
         }
@@ -60,34 +61,6 @@
             height: auto;
             object-fit: contain;
             border-radius: 5px;
-        }
-        .honor-wall-grid {
-            grid-template-columns: repeat(10, 1fr);
-        }
-        .honor-wall-grid img:nth-child(1) {
-            grid-column: span 5;
-            grid-row: span 2;
-        }
-        .honor-wall-grid img:nth-child(2),
-        .honor-wall-grid img:nth-child(3),
-        .honor-wall-grid img:nth-child(4),
-        .honor-wall-grid img:nth-child(5) {
-            grid-column: span 2.5;
-            grid-row: span 1;
-        }
-        .honor-wall-grid img:nth-child(6),
-        .honor-wall-grid img:nth-child(7) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-        .honor-wall-grid img:nth-child(8),
-        .honor-wall-grid img:nth-child(9),
-        .honor-wall-grid img:nth-child(10),
-        .honor-wall-grid img:nth-child(11),
-        .honor-wall-grid img:nth-child(12),
-        .honor-wall-grid img:nth-child(13) {
-            grid-column: span 1;
-            grid-row: span 1;
         }
         @media (max-width: 768px) {
             .grid-container {
@@ -199,11 +172,9 @@
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (10).gif" alt="痫无忧 Image 4">
         </div>
     </div>
-
-    <!-- Honor Wall -->
-    <div class="honor-wall-container">
+ <div class="honor-wall-container">
         <h2>荣誉墙</h2>
-        <div class="grid-container honor-wall-grid">
+        <div class="grid-container">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/国家奖学金.png" alt="国家奖学金">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/青鸥奖.png" alt="青鸥奖">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/山西建投教育奖.png" alt="山西建投优秀教育奖">
@@ -216,7 +187,7 @@
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/劳动实践优秀个人.png" alt="劳育优秀个人">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/学业优秀个人.png" alt="学业优秀个人">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/社会实践优秀个人.png" alt="社会实践优秀个人">
-            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/公益服务优秀个人.png" alt="社会实践优秀个人">
+            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/公益服务优秀个人.png" alt="公益服务优秀个人">
         </div>
     </div>
 </body>
