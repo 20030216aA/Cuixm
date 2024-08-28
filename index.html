@@ -22,35 +22,35 @@
             border-radius: 8px;
             margin-top: 20px;
         }
-        .content {
-            max-width: 800px;
-            text-align: justify;
-            background: white;
-            padding: 20px;
+        .intro-container, .content-container {
+            width: 100%;
+            max-width: 900px;
             margin: 20px;
+            background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .content, .intro {
+            text-align: justify;
+            margin-bottom: 20px;
         }
         .content h2 {
             text-align: left;
             color: #333;
             font-size: 1.5em;
+            margin-top: 0;
         }
-        .content p, .content ul, .content ol {
+        .content p, .content ul, .content ol, .intro p {
             text-indent: 2em;
             margin-bottom: 1em;
             text-align: left;
         }
         .grid-container {
-            width: 100%;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            padding: 20px;
-            background: #fff;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
         .grid-container img {
             width: 100%;
@@ -59,73 +59,91 @@
             border-radius: 5px;
         }
         @media (max-width: 768px) {
-            .main-image {
-                width: 100px;
-            }
-            .content {
-                padding: 10px;
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
             }
             .grid-container img {
                 height: 150px;
+            }
+            .main-image {
+                width: 100px;
+            }
+            .content-container, .intro-container {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
     <h1>崔星明个人陈述</h1>
-     <div class="content">
-        <p>老师您好！我是太原理工大学的崔星明，计算机科学与技术专业（卓越工程师班），中共预备党员，成绩排名 2/224，获得国家奖学金，睿亢机器人开发者大赛全国一等奖，通过英语四六级考试，语言水平能够在开放环境中满足科研工作对外语的读写要求。</p>
-        <p>非常感谢您给予我这次与您深入交流的机会。贵校一直是我梦寐以求的学府，您的研究方向与教学成果非常吸引我。下面是我的个人经历，部分内容与您的研究领域有较好的契合：</p>
-        <p>三维建模: 掌握一些基础的环境建筑建模、渲染和呈现技术，熟悉 3dmax、Lumion、unity 以及 PS、PR 等相关软件。运用这些技术，参加睿亢机器人开发者大赛数字建模方向，获得全国一等奖。</p>
-    </div>
+    
     <!-- Main Image -->
     <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/证件照.png" alt="崔星明" class="main-image">
-    
-    <!-- Project Sections -->
-    <div class="content">
-        <h2>岁月风华 — 登临俯瞰临江都</h2>
-        <p>类型：数字三维建模、虚拟现实（竞赛）</p>
-        <p>简介：为更有效地保护滕王阁历史遗迹以及提升游客的观赏体验组织开发滕王阁3D模型</p>
-        <p>成果：获得睿抗机器人开发者大赛国家一等奖（工信部）</p>
-        <p>内容：</p>
-        <ol>
-            <li>收集相关素材，运用3D Max搭建滕王阁的基础模型</li>
-            <li>利用Lumion进行场景渲染，借助Unity增加互动，提升用户体验</li>
-            <li>使用PR、AE制作视频展示，导入VR设备，提供沉浸式体验</li>
-        </ol>
-    </div>
-    <!-- Image Grid for Project 1 -->
-    <div class="grid-container">
-       <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/主.gif" alt="Image 1">
-        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/搭建.gif" alt="Image 2">
-        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com.gif" alt="Image 3">
-        <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/VR.gif" alt="Image 4">
+
+    <!-- Introduction -->
+    <div class="intro-container">
+        <div class="intro">
+            <p>老师您好！我是太原理工大学的崔星明，计算机科学与技术专业（卓越工程师班），中共预备党员，成绩排名 2/224，获得国家奖学金，睿亢机器人开发者大赛全国一等奖，通过英语四六级考试，语言水平能够在开放环境中满足科研工作对外语的读写要求。</p>
+            <p>非常感谢您给予我这次与您深入交流的机会。贵校一直是我梦寐以求的学府，您的研究方向与教学成果非常吸引我。下面是我的个人经历，部分内容与您的研究领域有较好的契合：</p>
+            <p>三维建模: 掌握一些基础的环境建筑建模、渲染和呈现技术，熟悉 3dmax、Lumion、unity 以及 PS、PR 等相关软件。运用这些技术，参加睿亢机器人开发者大赛数字建模方向，获得全国一等奖。</p>
+        </div>
     </div>
     
-      <div class="content">
-        <h2>QR通 — 基于二维码的信息管理系统</h2>
-        <p>类型：软件开发（软件著作权）</p>
-        <p>简介：开发信息管理系统，采用二维码技术可用于固定资产的管理</p>
-        <p>内容：</p>
-        <ol>
-            <li>前后端开发、二维码信息生成与使用Qrcode、Zbar做信息二维码的生成与提取</li>
-            <li>使用Opencv对二维码图形进行识别前的预处理</li>
-            <li>申请发表软件著作权（第一作者）</li>
-        </ol>
-    </div>
-    
-    <div class="grid-container">
-       <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/qr通.gif" alt="Image 1">
-       
-    </div>
-    <!-- New Project - 痫无忧 -->
-    <div class="content">
-        <h2>痫无忧 — 基于脑机接口的癫痫预测</h2>
-        <p>类型：医疗技术应用</p>
-        <p>简介：开发基于脑电设备监测系统的微信小程序，通过蓝牙与脑电设备连接，实时检测用户的脑电波数据，分析脑电波的幅值和波形变化，识别可能的癫痫发作迹象，并提供防护措施及建议。</p>
-        <!-- Intended for future image links -->
+    <!-- Project 1 - 岁月风华 -->
+    <div class="content-container">
+        <div class="content">
+            <h2>岁月风华 — 登临俯瞰临江都</h2>
+            <p>类型：数字三维建模、虚拟现实（竞赛）</p>
+            <p>简介：为更有效地保护滕王阁历史遗迹以及提升游客的观赏体验组织开发滕王阁3D模型</p>
+            <p>成果：获得睿抗机器人开发者大赛国家一等奖（工信部）</p>
+            <p>内容：</p>
+            <ol>
+                <li>收集相关素材，运用3D Max搭建滕王阁的基础模型</li>
+                <li>利用Lumion进行场景渲染，借助Unity增加互动，提升用户体验</li>
+                <li>使用PR、AE制作视频展示，导入VR设备，提供沉浸式体验</li>
+            </ol>
+        </div>
+        <!-- Image Grid for Project 1 -->
         <div class="grid-container">
-            <img src="https://your-image-link-here.jpg" alt="痫无忧 Image">
+            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/主.gif" alt="Image 1">
+            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/搭建.gif" alt="Image 2">
+            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com.gif" alt="Image 3">
+            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/VR.gif" alt="Image 4">
+        </div>
+    </div>
+
+    <!-- Project 2 - QR通 -->
+    <div class="content-container">
+        <div class="content">
+            <h2>QR通 — 基于二维码的信息管理系统</h2>
+            <p>类型：软件开发（软件著作权）</p>
+            <p>简介：开发信息管理系统，采用二维码技术可用于固定资产的管理</p>
+            <p>内容：</p>
+            <ol>
+                <li>前后端开发、二维码信息生成与使用Qrcode、Zbar做信息二维码的生成与提取</li>
+                <li>使用Opencv对二维码图形进行识别前的预处理</li>
+                <li>申请发表软件著作权（第一作者）</li>
+            </ol>
+        </div>
+        <!-- Image for Project 2 -->
+        <div class="grid-container" style="grid-template-columns: 1fr;">
+            <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/qr通.gif" alt="QR通 Image">
+        </div>
+    </div>
+
+    <!-- Project 3 - 痫无忧 -->
+    <div class="content-container">
+        <div class="content">
+            <h2>痫无忧 — 基于脑机接口的癫痫预测</h2>
+            <p>类型：医疗技术应用</p>
+            <p>简介：开发基于脑电设备监测系统的微信小程序，通过蓝牙与脑电设备连接，实时检测用户的脑电波数据，分析脑电波的幅值和波形变化，识别可能的癫痫发作迹象，并提供防护措施及建议。</p>
+        </div>
+        <!-- Image Grid for Project 3 -->
+        <div class="grid-container">
+            <img src="https://your-image-link-here.jpg" alt="痫无忧 Image 1">
+            <img src="https://your-image-link-here.jpg" alt="痫无忧 Image 2">
+            <img src="https://your-image-link-here.jpg" alt="痫无忧 Image 3">
+            <img src="https://your-image-link-here.jpg" alt="痫无忧 Image 4">
         </div>
     </div>
 
