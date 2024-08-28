@@ -13,8 +13,10 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            text-align: center;
-            background: #f4f4f4;
+            background-image: url('https://raw.githubusercontent.com/20030216aA/Cuixm/main/背景图.jpg'); /* 背景图URL */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
         }
         .main-image {
             width: 150px;
@@ -22,7 +24,7 @@
             border-radius: 8px;
             margin-top: 20px;
         }
-        .intro-container, .content-container {
+        .intro-container, .content-container, .final-section {
             width: 100%;
             max-width: 900px;
             margin: 20px;
@@ -30,51 +32,76 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
+            text-align: left;
         }
         .content, .intro, .practice, .honor {
-            text-align: left;
             margin-bottom: 20px;
-            text-indent: 2em;
         }
-        .content h2 {
-            text-align: left;
+        h1, h2, h3 {
             color: #333;
-            font-size: 1.5em;
             margin-top: 0;
         }
-        .content p, .content ul, .content ol, .intro p, .practice p, .honor p {
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.75em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        p {
             margin-bottom: 1em;
-        }
-        .content ol {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .content ol li {
             text-indent: 2em;
         }
+        .divider {
+            margin: 30px 0;
+            border-bottom: 2px solid #ddd;
+        }
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            justify-content: space-between;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         .grid-container img {
-            width: 100%;
+            width: calc(50% - 10px);
             height: auto;
             object-fit: contain;
             border-radius: 5px;
         }
+        .wide-grid-container img {
+            width: calc(25% - 10px);
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        .large-image img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1em;
+        }
+        .contact p {
+            display: inline-block;
+            margin: 0 10px;
+        }
         @media (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .grid-container img {
-                height: 150px;
+            .grid-container img, .wide-grid-container img {
+                width: 100%;
             }
             .main-image {
                 width: 100px;
             }
-            .content-container, .intro-container {
+            .content-container, .intro-container, .final-section {
                 padding: 10px;
             }
         }
@@ -89,23 +116,24 @@
     <!-- Introduction -->
     <div class="intro-container">
         <div class="intro">
-            <p>老师您好！我是太原理工大学的崔星明，计算机科学与技术专业（卓越工程师班），中共预备党员，成绩排名 2/224，获得国家奖学金，睿亢机器人开发者大赛全国一等奖，顺利通过英语四六级考试，熟练掌握编程语言和工程软件的使用，具备扎实的语言能力和实践能力，能够胜任未来的学习和研究工作。</p>
-            <p>非常感谢您给予我这次与您深入交流的机会。贵校是我梦寐以求的学府，您的研究方向和教学成果令我十分向往。以下是我的个人经历，其中部分内容与您的研究领域密切相关：</p>
+            <p>老师您好！我是太原理工大学的崔星明，计算机科学与技术专业（卓越工程师班），中共预备党员，成绩排名 2/224，获得国家奖学金，睿亢机器人开发者大赛全国一等奖，顺利通过英语四六级考试，熟练掌握编程语言和工程软件的使用，具备扎实的语言能力和实践能力，能够胜任未来的学习和研究工作。非常感谢您给予我这次与您深入交流的机会!贵校是我梦寐以求的学府，您的研究方向和教学成果令我十分向往。</p>
         </div>
     </div>
     
-    <!-- Project 1 - 岁月风华 -->
+    <!-- Project Wall -->
     <div class="content-container">
+        <h2>项目墙</h2>
+        <p>以下是我的个人经历，其中部分内容与您的研究领域相关：</p>
+        
+        <!-- Project 1 -->
         <div class="content">
-            <h2>岁月风华 — 登临俯瞰临江都</h2>
+            <h3>岁月风华 — 登临俯瞰临江都</h3>
             <p>类型：数字三维建模、虚拟现实</p>
             <p>简介：为保护滕王阁历史遗迹并提升游客的观赏体验，开发滕王阁3D模型。</p>
             <p>成果：获得睿抗机器人开发者大赛国家一等奖（工信部）</p>
             <p>内容：</p>
-            <ol>
-                <li>模型搭建与场景渲染</li>
-                <li>增强互动与效果呈现</li>
-            </ol>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;模型搭建与场景渲染</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;增强互动与效果呈现</p>
         </div>
         <!-- Image Grid for Project 1 -->
         <div class="grid-container">
@@ -114,92 +142,100 @@
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com.gif" alt="展示">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/VR.gif" alt="VR">
         </div>
-    </div>
 
-    <!-- Project 2 - QR通 -->
-    <div class="content-container">
+        <div class="divider"></div>
+
+        <!-- Project 2 -->
         <div class="content">
-            <h2>QR通 — 基于二维码的信息管理系统</h2>
+            <h3>QR通 — 基于二维码的信息管理系统</h3>
             <p>类型：软件开发（软件著作权）</p>
             <p>简介：开发用于固定资产管理的信息系统，基于二维码技术。</p>
             <p>成果：以第一作者身份获得软件著作权。</p>
             <p>内容：</p>
-            <ol>
-                <li>系统前后端开发</li>
-                <li>二维码信息存储与提取</li>
-            </ol>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;系统前后端开发</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;二维码信息存储与提取</p>
         </div>
         <!-- Image for Project 2 -->
-        <div class="grid-container" style="grid-template-columns: 1fr;">
+        <div class="grid-container large-image">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/qr通.gif" alt="QR通 Image">
         </div>
-    </div>
 
-    <!-- Project 3 - 物流站点吞吐量预测 -->
-    <div class="content-container">
+        <div class="divider"></div>
+
+        <!-- Project 3 -->
         <div class="content">
-            <h2>物流站点吞吐量预测</h2>
+            <h3>物流站点吞吐量预测</h3>
             <p>类型：数学建模论文撰写</p>
             <p>简介：应用机器学习算法，构建预测物流站点吞吐量的数学模型，并发表相关学术论文。</p>
             <p>成果：以第二作者身份发表ICETCI论文。</p>
             <p>内容：</p>
-            <ol>
-                <li>问题定义与模型搭建</li>
-                <li>数据挖掘与机器学习算法应用</li>
-            </ol>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;问题定义与模型搭建</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;数据挖掘与机器学习算法应用</p>
         </div>
         <!-- Image for Project 3 -->
-        <div class="grid-container" style="grid-template-columns: 1fr;">
+        <div class="grid-container large-image">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (4).gif" alt="物流站点 Image">
         </div>
-    </div>
-    
-    <!-- Project 4 - 痫无忧 -->
-    <div class="content-container">
+
+        <div class="divider"></div>
+
+        <!-- Project 4 -->
         <div class="content">
-            <h2>痫无忧 — 基于脑机接口的癫痫预测</h2>
+            <h3>痫无忧 — 基于脑机接口的癫痫预测</h3>
             <p>类型：医疗技术应用</p>
             <p>简介：开发基于脑电设备的微信小程序，实时监测用户脑电波数据，分析波形变化以识别癫痫发作迹象，提供预警和防护建议。</p>
             <p>内容：</p>
-            <ol>
-                <li>微信小程序开发</li>
-                <li>数据挖掘与机器学习算法应用</li>
-            </ol>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;微信小程序开发</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;数据挖掘与机器学习算法应用</p>
         </div>
         <!-- Image Grid for Project 4 -->
-        <div class="grid-container">
+        <div class="wide-grid-container">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (5).gif" alt="痫无忧 Image 1">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (9).gif" alt="痫无忧 Image 2">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (6).gif" alt="痫无忧 Image 3">
             <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/视频转Gif_爱给网_aigei_com (10).gif" alt="痫无忧 Image 4">
         </div>
     </div>
+
     <!-- Practical Experience Section -->
     <div class="content-container">
         <div class="practice">
             <h2>实践墙</h2>
             <p>我来自农村，艰苦的成长环境塑造了我坚韧不拔的品质，但是也有与来自农村其他同学相同的困扰，缺乏自信心，不善于表达等，这些问题通过大学里面参加学生工作、社会实践、学科竞赛得到了解决。</p>
-            <div class="grid-container">
+            <div class="large-image">
                 <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/实践墙1.png" alt="实践墙">
             </div>
-            <div class="grid-container">
+            <div class="large-image">
                 <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/实践墙2.png" alt="实践墙">
             </div>
         </div>
     </div>
+
     <!-- Honor Wall Section -->
     <div class="content-container">
         <div class="honor">
             <h2>荣誉墙</h2>
             <p>在这个不断奋斗的过程中，也收获到许多荣誉和嘉奖，尤其是国奖奖学金和国家励志奖学金，这些都是对我个人辛苦付出、综合能力、社会贡献的肯定。</p>
-            <div class="grid-container">
+            <div class="large-image">
                 <img src="https://raw.githubusercontent.com/20030216aA/Cuixm/main/荣誉墙.png" alt="荣誉墙">
             </div>
         </div>
     </div>
 
+    <!-- Final Section -->
     <div class="content-container">
-        <p style="text-align: left;">写到最后，感谢老师能考虑我的申请，我会认真关注贵校的预推免招生信息，并认真准备相关考核项目，珍惜这次宝贵机会，如果您有任何需要进一步了解或者指导考核的随时联系我就好，谢谢老师！</p>
+        <div class="final-section">
+            <h2>写到最后</h2>
+            <p>写到最后，感谢老师能考虑我的申请，我会认真关注贵校的预推免招生信息，并认真准备相关考核项目，珍惜这次宝贵机会。如果您有任何需要进一步了解或者指导考核的随时联系我就好，谢谢老师！</p>
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact">
+        <p>QQ: 1764198532</p>
+        <p>电话: 18103536775</p>
+        <p>微信: Cuixm-666</p>
+        <p>邮箱: cuixingming2467@link.tyut.edu.cn</p>
     </div>
     
 </body>
